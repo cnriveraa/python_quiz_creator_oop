@@ -21,11 +21,11 @@ while True: # start an infinite loop to keep asking for questions
 
 
     # add the questions and answers to the text file
-    with open(file_name, "a") as file:   
-        file.write(f"Q: {question}\n")   
-        for key, answer in answer.items():   
-            file.write(f"{key}: {answer}\n")  
-        file.write(f"Correct answer: {correct_answer}\n")   
-        file.write("\n")  
+    with open(file_name, "a") as file:   # open file in append mode
+        file.write(f"Q: {question}\n")   # write the question to the file
+        for key, answer in answer.items():   # iterate through the answers
+            file.write(f"{key}: {answer}\n")  # write each answers to the file
+        file.write(f"Correct answer: {correct_answer}\n")   # write the correct answer
+        file.write("\n")  # add a new line for seperation
 
 # ask if the user wants another question
