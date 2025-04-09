@@ -13,8 +13,12 @@ while True: # start an infinite loop to keep asking for questions
         answer[option] = answer       # store the answers in the dictionary
 
     correct_answer = input("Enter the correct answer (a, b, c, or d): ").lower()    # prompt for the correct answer
-    
-# validate the correct answer
-# error message if the answer is not valid
+
+    # validate the correct answer
+    if correct_answer not in answer:
+        print("Invalid answer. Please enter a, b, c, or d.")  # error message if the answer is not valid
+        continue  # restart the loop to ask questions again
+
+
 # add the questions and answers to the text file
 # ask if the user wants another question
