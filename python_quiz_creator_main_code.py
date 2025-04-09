@@ -6,7 +6,8 @@ file_name = "quiz_questions.txt"
 while True: # start an infinite loop to keep asking for questions
     question = input("Enter the question: ")     # prompt for the user to enter the questions
     
-# a dictionary to store the answers
+    asnwers = {} # a dictionary to store the answers
+
 # prompt for the user to enter the answers
 # store the answers in the dictionary
 # prompt for the correct answer
