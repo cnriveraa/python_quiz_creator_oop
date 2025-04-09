@@ -28,4 +28,9 @@ while True: # start an infinite loop to keep asking for questions
         file.write(f"Correct answer: {correct_answer}\n")   # write the correct answer
         file.write("\n")  # add a new line for seperation
 
-# ask if the user wants another question
+    # ask if the user wants another question
+    another_question = input("Do you want to add another question? (yes/no): ").lower()
+    
+    if another_question != "yes":  # if the user does not want to add another question
+        print("Thank you for using the quiz creator!")
+        break  # end the loop
