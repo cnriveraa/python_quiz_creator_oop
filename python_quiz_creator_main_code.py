@@ -34,3 +34,6 @@ while True: # start an infinite loop to keep asking for questions
     if another_question != "yes":  # if the user does not want to add another question
         print("Thank you for using the quiz creator!")
         break  # end the loop
+
+# confirmation message
+print(f"Questions have been saved to {file_name}.")
