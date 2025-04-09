@@ -1,0 +1,7 @@
+Q: What is Ethel the Cat known for?
+a: UIIAI cat
+b: Grumpy cat
+c: Dinner table cat
+d: Crying cat
+Correct answer: a
+
