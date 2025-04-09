@@ -10,8 +10,8 @@ while True: # start an infinite loop to keep asking for questions
     
     for option in ['a', 'b', 'c', 'd']:
         answer = input(f"Enter answer for option {option}: ")    # prompt for the user to enter the answers
+        answer[option] = answer       # store the answers in the dictionary
         
-# store the answers in the dictionary
 # prompt for the correct answer
 # validate the correct answer
 # error message if the answer is not valid
