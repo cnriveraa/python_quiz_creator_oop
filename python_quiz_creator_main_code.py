@@ -1,6 +1,8 @@
 # python_quiz_creator_main_code.py
 
 # output file name
+file_name = "quiz_questions.txt"
+
 # prompt for the user to enter the questions
 # a dictionary to store the answers
 # prompt for the user to enter the answers
