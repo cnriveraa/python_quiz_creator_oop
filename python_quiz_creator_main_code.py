@@ -20,5 +20,12 @@ while True: # start an infinite loop to keep asking for questions
         continue  # restart the loop to ask questions again
 
 
-# add the questions and answers to the text file
+    # add the questions and answers to the text file
+    with open(file_name, "a") as file:   
+        file.write(f"Q: {question}\n")   
+        for key, answer in answer.items():   
+            file.write(f"{key}: {answer}\n")  
+        file.write(f"Correct answer: {correct_answer}\n")   
+        file.write("\n")  
+
 # ask if the user wants another question
