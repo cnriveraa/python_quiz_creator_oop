@@ -29,4 +29,13 @@ def ask_question(question_data):
         print(f"Wrong! The correct answer is: {correct_answer}")
 
 # main function to load the questions and pick a random one
+def main(quiz_output):
+    print("Welcome to the Quiz!")
+    question = load_question(quiz_output)
+    if not question:
+        print("No questions found in the quiz file.")
+        return
+    question = random.choice(question)
+    ask_question(question)
+
 # entry point check for running the program
