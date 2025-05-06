@@ -4,7 +4,7 @@ import random
 import os
 
 # add function to load question from JSON file
-def load_question(quiz_output):
+def load_questions(quiz_output):
     if not os.path.exists(quiz_output):
         print(f"Error: File '{quiz_output}' does not exist.")
         return []
@@ -29,16 +29,26 @@ def ask_question(question_data):
         print(f"Wrong! The correct answer is: {correct_answer}")
 
 # main function to load the questions and pick a random one
-def main(quiz_output):
+def main():
     print("Welcome to the Quiz!")
-    question = load_question(quiz_output)
-    if not question:
+    print("Current Working Directory:", os.getcwd())  # Check current directory
+    questions = load_questions(r'C:\Users\Chloie Nicole Rivera\OneDrive - Polytechnic University of the Philippines\Desktop\BSCPE 1-6\2ND SEM\[CMPE 103] OOP\rivera_python_quiz_creator_oop\python_quiz.json')
+    if not questions:
         print("No questions found in the quiz file.")
         return
-    question = random.choice(question)
-    ask_question(question)
+    
+    # loop to allow multiple questions
+    while questions:
+        selected_questions = random.choice(questions)
+        ask_question(selected_questions)
+        questions.remove(selected_questions)
+        continue_quiz = input("Do you want to continue? (yes/no): ").strip().lower()
+        if continue_quiz != 'yes':
+            print("Thank you for playing!")
+            break
+
+    print("Thank you for playing!")
 
 # entry point check for running the program
 if __name__ == "__main__":
-    quiz_output = 'python_quiz.json'  # specify the path to your JSON file
-    main(quiz_output)
+    main()
