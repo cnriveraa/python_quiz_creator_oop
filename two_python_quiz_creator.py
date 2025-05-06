@@ -39,3 +39,6 @@ def main(quiz_output):
     ask_question(question)
 
 # entry point check for running the program
+if __name__ == "__main__":
+    quiz_output = 'python_quiz.json'  # specify the path to your JSON file
+    main(quiz_output)
