@@ -17,7 +17,16 @@ def load_question(quiz_output):
         print(f"Error: File '{quiz_output}' is not a valid JSON file.")
     return []
 
-
 # add function to ask a question and check the answer
+def ask_question(question_data):
+    print("Question:")
+    print(question_data['question'])
+    user_answer = input("Your answer: ").strip()
+    correct_answer = question_data['answer'].strip()
+    if user_answer.lower() == correct_answer.lower():
+        print("Correct!")
+    else:
+        print(f"Wrong! The correct answer is: {correct_answer}")
+
 # main function to load the questions and pick a random one
 # entry point check for running the program
